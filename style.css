@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://css.gg/shopping-cart.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(33, 59%, 87%);
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template:
+        'img desc' 15rem
+        'img desc' 15rem
+        / 20rem 20rem;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+img {
+    width: 20rem;
+    height: 30rem;
+    border-radius: 1rem 0 0 1rem;
+    grid-area: img;
+    background-size: cover;
+}
+
+.desc {
+    grid-area: desc;
+    padding: 2rem;
+}
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    opacity: .6;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    margin: 1.2rem 3rem 1.2rem 0;
+}
+
+.product-info {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    opacity: .6;
+}
+
+.price {
+    margin: 1.7rem 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.final-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2.3rem;
+    color: hsl(158, 36%, 37%);
+    align-self: center;
+}
+
+.initial-price {
+    text-decoration: line-through;
+    opacity: .6;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+    padding-top: .3rem;
+}
+
+button {
+    border-style: none;
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    width: 16rem;
+    height: 3.2rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: hsl(158, 35%, 22%);
+}
+
+.shopping-cart {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: .7rem;
+}
