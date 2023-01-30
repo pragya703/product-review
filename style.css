@@ -8,113 +8,160 @@
     padding: 0;
 }
 
-.container {
-    background-color: hsl(33, 59%, 87%);
-    width: 100vw;
+main {
+    background: hsl(30, 38%, 92%);
+    width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template: 30rem / 20rem 20rem;
+    border-top-left-radius: .8rem;
+    border-bottom-left-radius: .8rem;
     justify-content: center;
+    align-content: center;
 }
 
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img {
-    height: 608px;
-    width: 400px;
-    background-size: cover;
-}
-
-img {
-    height: 608px;
-    width: 400px;
-    margin: 0;
-    padding: 0;
-    border-radius: 5% 0 0 5%;
+.perfume-img {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: .8rem;
+    border-bottom-left-radius: .8rem;
+    grid-area: 1/1/2/2;
+    width: 20rem;
+    height: 30rem;
 }
 
 .desc {
-    background-color: #fff;
-    height: 608px;
-    width: 400px;
-    padding: 40px;
-    margin: 0;
-    border-radius: 0 5% 5% 0;
+    background: #fff;
+    grid-area: 1/2/2/3;
+    border-top-right-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    width: 20rem;
+    height: 30rem;
+    padding: 2rem;
 }
 
 .product-type {
     text-transform: uppercase;
-    letter-spacing: 6px;
+    letter-spacing: .4rem;
     opacity: .6;
-    font-size: 19px;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
 }
 
 .heading {
     font-family: 'Fraunces', serif;
-    font-size: 45px;
-    margin: 25px 0;
+    font-size: 2rem;
+    margin: 1.2rem 3rem 1.2rem 0;
 }
 
 .product-info {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
-    font-size: 19px;
+    font-size: 1rem;
     opacity: .6;
-    margin: 27px 0;
 }
 
-p {
-    margin: 27px 0;
+.price {
+    margin: 1.7rem 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .final-price {
     font-family: 'Fraunces', serif;
-    font-size: 45px;
-    margin: 0px 20px 25px 0;
+    font-size: 2.3rem;
     color: hsl(158, 36%, 37%);
+    align-self: center;
 }
 
 .initial-price {
     text-decoration: line-through;
-    opacity: .6;
-    vertical-align: super;
-    font-size: 15px;
+    opacity: .5;
+    font-size: 1.1rem;
+    padding-right: 1rem;
+    padding-top: .3rem;
 }
 
 button {
     border-style: none;
-    border-radius: 10px;
+    border-radius: .4rem;
     background-color: hsl(158, 36%, 37%);
-    width: 320px;
-    height: 55px;
+    width: 100%;
+    height: 3.2rem;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: large;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.shopping-cart {
-    width: 20px;
-    height: 20px;
-    margin: 10px;
+button:hover {
+    background-color: hsl(158, 35%, 22%);
 }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 800px;
-    opacity: .6;
-    border-radius: 10px;
+.add-to-cart {
+    margin-right: .5rem;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template: 14rem 20rem / 20rem;
+        border-top-left-radius: .8rem;
+        border-top-right-radius: .8rem;
+    }
+
+    .perfume-img {
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        grid-area: 1/1/2/2;
+        border-radius: 0;
+        border-top-left-radius: .8rem;
+        border-top-right-radius: .8rem;
+        width: 20rem;
+        height: 15rem;
+    }
+
+    .desc {
+        grid-area: 2/1/3/2;
+        border-radius: 0;
+        border-bottom-left-radius: .8rem;
+        border-bottom-right-radius: .8rem;
+        width: 20rem;
+        height: 20rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .product-type {
+        letter-spacing: .3rem;
+        font-size: .65rem;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+        margin: .7rem 0;
+    }
+
+    .product-info {
+        line-height: 1.3;
+        font-size: .8rem;
+    }
+
+    .price {
+        margin: .7rem 4rem .7rem 0;
+    }
+
+    .final-price {
+        font-size: 1.8rem;
+    }
+
+    .initial-price {
+        font-size: .9rem;
+    }
 }
